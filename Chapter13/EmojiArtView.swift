@@ -52,7 +52,7 @@ class EmojiArtView: UIView, UIDropInteractionDelegate {
         addSubview(label)
     }
     
-    
+    //Wow...this is really working well. 
     
     
     var backgroundImage: UIImage? { didSet { setNeedsDisplay() }}
