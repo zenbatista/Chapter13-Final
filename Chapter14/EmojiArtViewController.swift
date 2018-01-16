@@ -44,6 +44,23 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
             
         }
         set {
+            emojiArtBackgroundImage = (nil, nil)
+            emojiArtView.subviews.flatMap { $0 as? UILabel }.forEach { $0.removeFromSuperview() }
+            
+            if let url = newValue?.url {
+                imageFetcher = ImageFetcher(fetch: url) { (url, image) in
+                DispatchQueue.main.async {
+                    
+                    self.emojiArtBackgroundImage = (url, image)
+                    newValue?.emojis.forEach {
+                        let attributedText = $0.text.attributedString(withTextStyle: .body, ofSize: CGFloat($0.size))
+                        self.emojiArtView.addLabel(with: attributedText, centeredAt: CGPoint(x: $0.x, y: $0.y))
+                    }
+                    
+                  }
+                }
+            }
+            
             
         }
     }
