@@ -8,6 +8,22 @@
 
 import UIKit
 
+extension EmojiArt.EmojiInfo
+{
+    init?(label: UILabel) {
+        if let attributedText = label.attributedText, let font = attributedText.font {
+            x = Int(label.center.x)
+            y = Int(label.center.y)
+            text = attributedText.string
+            size = Int(font.pointSize)
+        }
+        else {
+            return nil
+        }
+    }
+}
+
+
 class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScrollViewDelegate,
     UICollectionViewDataSource,
     UICollectionViewDelegate,
@@ -15,8 +31,22 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     UICollectionViewDragDelegate,
     UICollectionViewDropDelegate
 {
+    // MARK: -- Model
     
-    
+    var emojiArt: EmojiArt? {
+        get {
+            if let url = emojiArtBackgroundImage.url {
+                
+                let emojis = emojiArtView.subviews.flatMap { $0 as? UILabel }.flatMap { EmojiArt.EmojiInfo(label: $0)}
+                return EmojiArt(url: url, emojis: emojis)
+            }
+            return nil
+            
+        }
+        set {
+            
+        }
+    }
     
     
     @IBOutlet weak var dropZone: UIView! {
@@ -53,13 +83,16 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         return emojiArtView
     }
     
-    var emojiArtBackgroundImage: UIImage? {
+    private var _emojiArtBackgroundImageURL: URL?
+    
+    var emojiArtBackgroundImage: (url: URL?, image: UIImage?) {
         get {
-            return emojiArtView.backgroundImage
+            return (_emojiArtBackgroundImageURL, emojiArtView.backgroundImage)
         } set {
+            _emojiArtBackgroundImageURL = newValue.url
             scrollView?.zoomScale = 1.0
-            emojiArtView.backgroundImage = newValue
-            let size = newValue?.size ?? CGSize.zero
+            emojiArtView.backgroundImage = newValue.image
+            let size = newValue.image?.size ?? CGSize.zero
             emojiArtView.frame = CGRect(origin: CGPoint.zero, size: size)
             scrollView?.contentSize = size
             
@@ -249,7 +282,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         imageFetcher = ImageFetcher() { (url, image) in
             DispatchQueue.main.async {
-                self.emojiArtBackgroundImage = image
+                self.emojiArtBackgroundImage = (url, image)
             }
         }
         
