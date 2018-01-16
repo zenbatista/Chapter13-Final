@@ -27,7 +27,7 @@
 		E798F2D0200BFF1A00C0D937 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E798F2D2200C0E0000C0D937 /* EmojiArtView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EmojiArtView+Gestures.swift"; sourceTree = "<group>"; };
 		E798F2D4200C147A00C0D937 /* TextFieldCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCollectionViewCell.swift; sourceTree = "<group>"; };
-		E7B8231520086D8A00A13240 /* Chapter13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter13.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B8231520086D8A00A13240 /* Chapter14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B8231820086D8A00A13240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7B8231D20086D8A00A13240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7B8231F20086D8A00A13240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				E798F2D0200BFF1A00C0D937 /* Default-568h@2x.png */,
-				E7B8231720086D8A00A13240 /* Chapter13 */,
+				E7B8231720086D8A00A13240 /* Chapter14 */,
 				E7B8231620086D8A00A13240 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,12 +61,12 @@
 		E7B8231620086D8A00A13240 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7B8231520086D8A00A13240 /* Chapter13.app */,
+				E7B8231520086D8A00A13240 /* Chapter14.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E7B8231720086D8A00A13240 /* Chapter13 */ = {
+		E7B8231720086D8A00A13240 /* Chapter14 */ = {
 			isa = PBXGroup;
 			children = (
 				E7B8232A20086DD500A13240 /* Supporting Docs */,
@@ -79,7 +79,7 @@
 				E7B8232B20086E2600A13240 /* EmojiArtViewController.swift */,
 				E72C8F712009D153002CE738 /* EmojiArtDocumentTableViewController.swift */,
 			);
-			path = Chapter13;
+			path = Chapter14;
 			sourceTree = "<group>";
 		};
 		E7B8232A20086DD500A13240 /* Supporting Docs */ = {
@@ -96,9 +96,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E7B8231420086D8A00A13240 /* Chapter13 */ = {
+		E7B8231420086D8A00A13240 /* Chapter14 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7B8232720086D8B00A13240 /* Build configuration list for PBXNativeTarget "Chapter13" */;
+			buildConfigurationList = E7B8232720086D8B00A13240 /* Build configuration list for PBXNativeTarget "Chapter14" */;
 			buildPhases = (
 				E7B8231120086D8A00A13240 /* Sources */,
 				E7B8231220086D8A00A13240 /* Frameworks */,
@@ -108,9 +108,9 @@
 			);
 			dependencies = (
 			);
-			name = Chapter13;
+			name = Chapter14;
 			productName = Chapter11;
-			productReference = E7B8231520086D8A00A13240 /* Chapter13.app */;
+			productReference = E7B8231520086D8A00A13240 /* Chapter14.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E7B8231020086D8A00A13240 /* Build configuration list for PBXProject "Chapter13" */;
+			buildConfigurationList = E7B8231020086D8A00A13240 /* Build configuration list for PBXProject "Chapter14" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E7B8231420086D8A00A13240 /* Chapter13 */,
+				E7B8231420086D8A00A13240 /* Chapter14 */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JCCFT2CXS;
-				INFOPLIST_FILE = "$(SRCROOT)/Chapter13/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Chapter14/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haraldbatista.Chapter11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -327,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JCCFT2CXS;
-				INFOPLIST_FILE = "$(SRCROOT)/Chapter13/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Chapter14/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haraldbatista.Chapter11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E7B8231020086D8A00A13240 /* Build configuration list for PBXProject "Chapter13" */ = {
+		E7B8231020086D8A00A13240 /* Build configuration list for PBXProject "Chapter14" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7B8232520086D8B00A13240 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7B8232720086D8B00A13240 /* Build configuration list for PBXNativeTarget "Chapter13" */ = {
+		E7B8232720086D8B00A13240 /* Build configuration list for PBXNativeTarget "Chapter14" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7B8232820086D8B00A13240 /* Debug */,
