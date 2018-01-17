@@ -70,10 +70,32 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     
     // MARK: - StoryBoard
     @IBAction func save(_ sender: UIBarButtonItem) {
+ 
         if let json = emojiArt?.json {
-            if let jsonString = String(data: json, encoding: .utf8) {
-                print(jsonString)
+            if let url = try? FileManager.default.url(
+                for: .documentDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+                ).appendingPathComponent("Untitled.json") {
+                do {
+                  try json.write(to: url)
+                    print("Salvei com successo")
+                } catch let error {
+                    print("Nao consequi \(error)")
+                }
+                    
+                    
             }
+            
+            
+            
+            
+            
+            
+//            if let jsonString = String(data: json, encoding: .utf8) {
+//                print(jsonString)
+//               }
         }
     }
     
