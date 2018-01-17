@@ -66,6 +66,18 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     }
     
     
+    
+    
+    // MARK: - StoryBoard
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        if let json = emojiArt?.json {
+            if let jsonString = String(data: json, encoding: .utf8) {
+                print(jsonString)
+            }
+        }
+    }
+    
+    
     @IBOutlet weak var dropZone: UIView! {
         
         didSet {
